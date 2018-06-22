@@ -1,21 +1,21 @@
 Package: requirements
-Version: 0.0.0.9000
 Title: Find Packages Required for Code to Run
-Description: Figure out what packages are required to run a given R expression, 
-    file ('.R', '.Rmd', '.Rnw', ...), or a directory of files. Includes 
-    heuristics for common implicit dependencies.
+Version: 0.0.0.9000
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
     person("RStudio", role = "cph")
   )
+Description: Figure out what packages are required to run a given R expression, 
+    file ('.R', '.Rmd', '.Rnw', ...), or a directory of files. Includes 
+    heuristics for common implicit dependencies.
 License: GPL-3
-Encoding: UTF-8
-LazyData: true
-ByteCompile: true
-Imports: 
-    rlang
-RoxygenNote: 6.0.1
-Suggests: 
-    testthat
 URL: https://github.com/hadley/requirements
 BugReports: https://github.com/hadley/requirements/issues
+Imports: 
+    rlang
+Suggests: 
+    testthat
+ByteCompile: true
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
