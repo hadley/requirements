@@ -1,7 +1,9 @@
 Package: requirements
 Version: 0.0.0.9000
-Title: What the Package Does (One Line, Title Case)
-Description: What the package does (one paragraph).
+Title: Find Packages Required for Code to Run
+Description: Figure out what packages are required to run a given R expression, 
+    file ('.R', '.Rmd', '.Rnw', ...), or a directory of files. Includes 
+    heuristics for common implicit dependencies.
 Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
     person("RStudio", role = "cph")
