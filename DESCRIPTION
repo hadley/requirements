@@ -13,3 +13,5 @@ ByteCompile: true
 Imports: 
     rlang
 RoxygenNote: 6.0.1
+Suggests: 
+    testthat
