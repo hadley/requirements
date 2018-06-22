@@ -17,3 +17,5 @@ Imports:
 RoxygenNote: 6.0.1
 Suggests: 
     testthat
+URL: https://github.com/hadley/requirements
+BugReports: https://github.com/hadley/requirements/issues
