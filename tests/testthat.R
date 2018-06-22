@@ -1,4 +1,4 @@
 library(testthat)
-library(necessity)
+library(requirements)
 
-test_check("necessity")
+test_check("requirements")
