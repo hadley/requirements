@@ -1,5 +1,7 @@
 # requirements
 
+[![Travis build status](https://travis-ci.org/hadley/requirements.svg?branch=master)](https://travis-ci.org/hadley/requirements)
+
 requirements allows you to impute required packages from R code, files (like `.R`, `.Rmd` and `.Rnw`) and directories. It primarily looks for use of functions like `library()` and `::`, but also uses heuristics to detect common implicit dependencies (e.g. methods, shiny, and roxygen2).
 
 ## Installation
