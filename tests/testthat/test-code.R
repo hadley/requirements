@@ -35,7 +35,10 @@ test_that("can find multiple packages", {
 })
 
 test_that("can work with expressions", {
-  x <- expression(x::f(0), y::f(1))
-  expect_equal(req_code(!!x), c("x", "y"))
+  x1 <- expression()
+  expect_equal(req_code(!!x1), character())
+
+  x2 <- expression(x::f(0), y::f(1))
+  expect_equal(req_code(!!x2), c("x", "y"))
 })
 
