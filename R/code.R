@@ -1,4 +1,14 @@
-find_pkgs <- function(x) {
+#' Find requirements from a block of code
+#'
+#' Looks for `::`, `:::`, `library()`, `require()`, `requireNamespace()`,
+#' and `loadNamespace()`.
+#'
+#' @param x Code to examine. Supports unquoting.
+#' @export
+#' @examples
+#' req_code(library("rlang"))
+#' req_code(rlang::expr())
+req_code <- function(x) {
   x <- enexpr(x)
   unique(find_pkgs_rec(x))
 }

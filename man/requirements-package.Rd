@@ -4,9 +4,19 @@
 \name{requirements-package}
 \alias{requirements}
 \alias{requirements-package}
-\title{requirements: What the Package Does (One Line, Title Case)}
+\title{requirements: Find Packages Required for Code to Run}
 \description{
-What the package does (one paragraph).
+Figure out what packages are required to run a given R expression,
+file ('.R', '.Rmd', '.Rnw', ...), or a directory of files. Includes
+heuristics for common implicit dependencies.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/hadley/requirements}
+  \item Report bugs at \url{https://github.com/hadley/requirements/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Hadley Wickham \email{hadley@rstudio.com}
