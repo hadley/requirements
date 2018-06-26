@@ -15,7 +15,8 @@ Imports:
     rlang
 Suggests: 
     testthat,
-    covr
+    covr,
+    rmarkdown
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true

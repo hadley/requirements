@@ -10,9 +10,15 @@ req_file(path)
 \item{path}{Path to file}
 }
 \description{
-Extract requirements from a file
+* `.R`: extracts requirements from parsed code
+
+* `.Rmd`: requirements from chunks. If rmarkdown package is installed,
+  will also add requirements from custom output type.
 }
 \examples{
-path <- system.file("examples", "simple.R", package = "requirements")
-req_file(path)
+path_r <- system.file("examples", "simple.R", package = "requirements")
+path_rmd <- system.file("examples", "simple.Rmd", package = "requirements")
+
+req_file(path_r)
+req_file(path_rmd)
 }
