@@ -18,7 +18,7 @@ find_pkgs_rec <- function(x) {
     return(character())
   }
 
-  if (is_pairlist(x)) {
+  if (is_pairlist(x) || is.expression(x)) {
     return(flat_map_chr(as.list(x), find_pkgs_rec))
   }
 
@@ -39,7 +39,7 @@ find_pkgs_rec <- function(x) {
     x <- call_standardise(x, env = baseenv())
     char_or_sym(x$package)
   } else {
-    flat_map_chr(as.list(x)[-1], find_pkgs_rec)
+    flat_map_chr(as.list(x), find_pkgs_rec)
   }
 
 }

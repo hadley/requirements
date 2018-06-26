@@ -24,11 +24,18 @@ test_that("handle character.only correctly", {
 test_that("find namespace qualifiers", {
   expect_equal(req_code(x::foo), "x")
   expect_equal(req_code(x:::foo), "x")
+  expect_equal(req_code(x::foo(x)), "x")
+  expect_equal(req_code(x:::foo(x)), "x")
 })
 
 test_that("can find multiple packages", {
   expect_equal(req_code({x::f; x::f}), "x")
   expect_equal(req_code({x::f; y::f}), c("x", "y"))
   expect_equal(req_code(function(x = x::f, y = y::f) {}), c("x", "y"))
+})
+
+test_that("can work with expressions", {
+  x <- expression(x::f(0), y::f(1))
+  expect_equal(req_code(!!x), c("x", "y"))
 })
 
