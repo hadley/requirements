@@ -2,7 +2,7 @@
 % Please edit documentation in R/code.R
 \name{req_code}
 \alias{req_code}
-\title{Find requirements from a block of code}
+\title{Extract requirements from code}
 \usage{
 req_code(x)
 }
@@ -14,5 +14,6 @@ Looks for `::`, `:::`, `library()`, `require()`, `requireNamespace()`,
 and `loadNamespace()`.
 }
 \examples{
-req_code(library("ralng"))
+req_code(library("rlang"))
+req_code(rlang::expr())
 }

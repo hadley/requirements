@@ -1,4 +1,4 @@
-#' Find requirements from a block of code
+#' Extract requirements from code
 #'
 #' Looks for `::`, `:::`, `library()`, `require()`, `requireNamespace()`,
 #' and `loadNamespace()`.
