@@ -7,7 +7,7 @@ test_that("can extract requirements from .R file", {
 })
 
 test_that("unparseable file requires nothing ", {
-  expect_equal(req_file(test_path("file-broken.R")), character())
+  expect_equal(req_file_r(test_path("file-broken.txt")), character())
 })
 
 test_that("fails if path does not exist", {
