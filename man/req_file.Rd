@@ -12,9 +12,9 @@ req_file(path)
 \description{
 * `.R`: extracts requirements from parsed code
 
-* `.Rmd`: requirements from chunks (parsed using regular expressions to
-  avoid dependency on knitr package). If rmarkdown package is installed,
-  will also add requirements from custom output type.
+* `.Rmd` & `.Rpres`: requirements from chunks (parsed using regular
+  expressions to avoid dependency on knitr package). If rmarkdown package is
+  installed, will also add requirements from custom output type.
 
 * `.Rnw`: tangles the document and then extracts from `.R` file.
 }
