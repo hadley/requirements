@@ -2,4 +2,5 @@
 
 export(req_code)
 export(req_file)
+export(req_namespace)
 import(rlang)
