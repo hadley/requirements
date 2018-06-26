@@ -1,0 +1,15 @@
+\documentclass[a4paper]{article}
+
+\title{Sweave Example}
+
+\begin{document}
+
+\maketitle
+
+<<>>=
+library("x")
+@
+
+<<boxp, eval=FALSE>>=
+y::z
+@

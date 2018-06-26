@@ -1,6 +1,5 @@
 context("test-file.R")
 
-
 # .R ----------------------------------------------------------------------
 
 test_that("can extract requirements from .R file", {
@@ -31,5 +30,14 @@ test_that("unparsed chunks are ignored", {
   expect_equal(
     req_file(test_path("file-partially-broken.Rmd")),
     c("rmarkdown", "x")
+  )
+})
+
+# .Rnw --------------------------------------------------------------------
+
+test_that("basic Rnw extraction works", {
+  expect_equal(
+    req_file(test_path("file-ok.Rnw")),
+    "x"
   )
 })

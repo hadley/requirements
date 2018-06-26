@@ -23,6 +23,7 @@ req_file <- function(path) {
   switch(ext,
     r = req_file_r(path),
     rmd = req_file_rmd(path),
+    rnw = req_file_rnw(path),
     character()
   )
 }
@@ -85,4 +86,15 @@ req_text <- function(text) {
       req_code(!!code)
     }
   )
+}
+
+
+# .Rnw --------------------------------------------------------------------
+
+req_file_rnw <- function(path) {
+  tempfile <- tempfile()
+  on.exit(unlink(tempfile))
+
+  utils::Stangle(path, output = tempfile, quiet = TRUE)
+  req_file_r(tempfile)
 }
