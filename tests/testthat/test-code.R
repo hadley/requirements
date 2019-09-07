@@ -11,8 +11,8 @@ test_that("finds explicit package loading calls", {
   expect_equal(req_code(library(x)), "x")
   expect_equal(req_code(library("x")), "x")
   expect_equal(req_code(require(x)), "x")
-  expect_equal(req_code(requireNamespace(x)), "x")
-  expect_equal(req_code(loadNamespace(x)), "x")
+  expect_equal(req_code(requireNamespace("x")), "x")
+  expect_equal(req_code(loadNamespace("x")), "x")
 })
 
 test_that("handle character.only correctly", {
