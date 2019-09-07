@@ -37,7 +37,11 @@ find_pkgs_rec <- function(x) {
     }
   } else if (is_call(x, c("requireNamespace", "loadNamespace"))) {
     x <- call_standardise(x, env = baseenv())
-    char_or_sym(x$package)
+    if (is.character(x$package)) {
+      x$package
+    } else {
+      character()
+    }
   } else {
     flat_map_chr(as.list(x), find_pkgs_rec)
   }
