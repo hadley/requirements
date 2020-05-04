@@ -6,9 +6,9 @@
 \alias{requirements-package}
 \title{requirements: Find Packages Required for Code to Run}
 \description{
-Figure out what packages are required to run a given R expression,
-file ('.R', '.Rmd', '.Rnw', ...), or a directory of files. Includes
-heuristics for common implicit dependencies.
+Figure out what packages are required to run a given R expression, 
+    file ('.R', '.Rmd', '.Rnw', ...), or a directory of files. Includes 
+    heuristics for common implicit dependencies.
 }
 \seealso{
 Useful links:
