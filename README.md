@@ -4,7 +4,7 @@
 [![Coverage status](https://codecov.io/gh/hadley/requirements/branch/master/graph/badge.svg)](https://codecov.io/github/hadley/requirements?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/requirements)](https://cran.r-project.org/package=requirements)
 
-requirements allows you to impute required packages from R code, files (like `.R`, `.Rmd` and `.Rnw`) and directories. It primarily looks for use of functions like `library()` and `::`, but also uses heuristics to detect common implicit dependencies (e.g. methods, shiny, and roxygen2). 
+requirements allows you to impute required packages from R code, files (like `.R`, `.Rmd` and `.Rnw`, and `Rmarkdown` and directories. It primarily looks for use of functions like `library()` and `::`, but also uses heuristics to detect common implicit dependencies (e.g. methods, shiny, and roxygen2). 
 
 The inspiration for this code comes from packrat. We're extracting it out in to a separate package so that it can be more easily extended and used by others.
 
